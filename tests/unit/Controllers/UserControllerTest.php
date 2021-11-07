@@ -23,7 +23,7 @@ class UserControllerTest extends TestCase
 
     public function setUp(): void
     {
-        $this->pdo = new \PDO("mysql:host=localhost;dbname=alter_solutions_db", 'root', '');
+        $this->pdo = new \PDO("mysql:host=asp-db;dbname=alter_solutions_db", 'user_solutions', 'alter-solutions');
 
         $this->userMapper = new UserMapper();
 

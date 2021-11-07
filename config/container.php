@@ -25,7 +25,7 @@ $containerBuilder->addDefinitions([
         \DI\get(UserServiceInterface::class)
     ),
     PDO::class => function (ContainerInterface $container) {
-        $conn = new \PDO("mysql:host={$_ENV['DB_HOST']};dbname={$_ENV['DB_DATABASE']}", $_ENV['DB_USERNAME'], $_ENV['DB_PASSWORD']);
+        $conn = new \PDO("mysql:host={$_ENV['MYSQL_HOST']};dbname={$_ENV['MYSQL_DATABASE']}", $_ENV['MYSQL_USER'], $_ENV['MYSQL_PASSWORD']);
         return $conn;
     },
 ]);
