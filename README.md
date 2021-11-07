@@ -42,13 +42,16 @@ $ composer test
 ```sh
 $ cp .env.exemplo .env
 ```
-
-2. Rodar o comando abaixo para subir os containers necessários:
+2. Rodar o comando abaixo para instalar as dependências do projeto:
+```
+$ composer install
+```
+3. Rodar o comando abaixo para subir os containers necessários:
 ```
 $ docker-compose up -d
 ```
 
-3. Rodar o comando abaixo para que seja criado a tabela que será utilizada:
+4. Rodar o comando abaixo para que seja criado a tabela que será utilizada:
 ```
 $ docker exec asp-app php vendor/bin/phinx  migrate
 ```
